@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="styles.css">
+    <title>Web Portfolio | Brenda</title>
+</head>
+<body>
+     <script>
+    function changeLanguage(lang) {
+      fetch(`lang/${lang}.json`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('No se pudo cargar el archivo JSON');
+          }
+          return response.json();
+        })
+        .then(data => {
+          for (const key in data) {
+            const element = document.getElementById(key);
+            if (element) {
+              element.innerHTML = data[key];
+            }
+          }
+        })
+        .catch(error => {
+          console.error('Error al cargar el JSON:', error);
+        });
+    }
+  </script>
+    <nav>
+        <div class="nav__bar">
+            <a href="#"><span class="logo nav__logo">B</span> Brenda|Ormachea</a>
+           
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-3-line"></i>
+            </div>
+         
+  </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a href="#home" id="nav-home">Home</a></li>
+            <li><a href="#about" id="nav-about">About Me</a></li>
+            <li><a href="#portfolio" id="nav-portfolio">Portfolio</a></li>
+            
+            <li><a href="#contact" id="nav-contact" class="btn">Contact</a></li>
+
+            <li class="language__wrapper">
+        <select class="language__select" onchange="changeLanguage(this.value)">
+      <option value="en">🌐</option>
+  <option value="es">ES</option>
+  <option value="it">IT</option>
+</select>  
+
+
+</li> 
+        </ul>
+
+    </nav>
+<header class="section__container header__container" id="home">
+    <div class="header__image">
+      <img src="assets/Abstract1.jpg" alt="header" /> 
+    </div>
+<div class="header__content">
+    <div>
+    <h1 id="hero-title"> <br/>Data Analyst &<br/>Content Creator</h1>
+    </div>
+    <div class="header__btn">
+        <a href="https://www.linkedin.com/in/brenda-ormachea-306364161" target="_blank" rel="noopener noreferrer">
+        <button id="hero-button" class="btn">Available for Projects</button>
+</a>
+    </div>
+</div>
+</header>
+    
+<section class="section__container about__container" id="about">
+    <div class="about__image">
+        <img src="assets/about1.jpg" alt="about" class="about__img"/>
+    </div>
+    <div class="about__content">
+        <h2 id="body-about" class="section__header">About Me</h2>
+        <p id="body-description" class="section__description">
+         Multilingual Data Analyst and Content Creator fluent in Spanish, English, and Italian. With a background in Psychology and certifications in Big Data and Full Stack Development, I bring together analytical thinking and creativity to craft stories that connect. I’m passionate about transforming complex data into clear insights and turning ideas into content that inspires and engages.  
+</p>
+        <div class="about__btn">
+  <a href="assets/CV EN.pdf" download="CV_Brenda_Ormachea.pdf" class="btn" id="about-button">Download CV</a>
+</div>
+
+    </div>
+</section>
+
+<section class="section__container skills__container" id="skills">
+    <h2 id= "section-skills" class="section__header">My Skills</h2>
+    <div class="skills__grid">
+        <div class="skills__card">
+            <span><i class="ri-html5-line"></i></span>
+            <h4>HTML</h4>
+
+        </div>
+         <div class="skills__card">
+            <span><i class="ri-css3-line"></i></span>
+            <h4>CSS</h4>
+        </div>
+
+<div class="skills__card">
+            <span><i class="ri-code-box-line"></i></span>
+            <h4>Python</h4>
+        </div>
+
+         <div class="skills__card">
+            <span><i class="ri-database-2-line"></i></span>
+            <h4>SQL | NoSQL</h4>
+        </div>
+
+         <div class="skills__card">
+            <span><i class="ri-bar-chart-box-line"></i></span>
+            <h4>PowerBi</h4>
+        </div>
+
+         <div class="skills__card">
+            <span><i class="ri-movie-ai-line"></i></span>
+            <h4>Video Edition</h4>     
+        </div>
+    </div>
+</section>
+
+<section class="section__container portfolio__container" id="portfolio">
+<h2 id="section-header" class="section__header">My Portfolio</h2>
+<p id="section-description" class="section__description">
+    Explore a selection of projects where data meets storytelling. From dashboards to documentaries, each piece reflects my passion for social, ecological, and cultural impact.
+</p>
+
+<div class="portfolio__grid">
+    <!-- Slider container -->
+<div class="slider">
+  <div class="slides">
+    <img src="assets/proyectoimagen/proyecto1 (72).png" alt="Informe Big Data - Página 1">
+    <img src="assets/proyectoimagen/proyecto3(70).png" alt="Informe Big Data - Página 3">
+    <img src="assets/proyectoimagen/proyecto4(69).png" alt="Informe Big Data - Página 4">
+    <img src="assets/proyectoimagen/proyecto5(68).png" alt="Informe Big Data - Página 5">
+    <img src="assets/proyectoimagen/proyecto6(67).png" alt="Informe Big Data - Página 6">
+    <img src="assets/proyectoimagen/proyecto7(66).png" alt="Informe Big Data - Página 7">
+ <p class="data-source-note">
+        📌 Excerpt from the final report of the Big Data course. Partial visualization of the original document, presented as part of my technical and narrative portfolio.
+    </p>  
+</div>
+  <button class="prev">❮</button>
+  <button class="next">❯</button>
+</div>
+
+    <div class="portfolio__card">
+        <img src="assets/Migracionfemenina.png" alt="Dashboard sobre migración femenina">
+    <p class="data-source-note">
+        📌 Data source: Migration Data Portal and Gender + Migration Hub.
+    </p>
+    </div>
+    <div class="portfolio__card">
+        <video width="640" height="360" controls>
+  <source src="assets/Carrusel Insta reciclaje.mp4" type="video/mp4">
+</video>
+<p class="data-source-note">
+📌 Data sourced from Eurostat and Spain’s Ministry for Ecological Transition. This carousel visualizes the gap between public perception and actual recycling rates across Europe.</p>
+    </div>
+    <div class="portfolio__card">
+        <video width="640" height="360" controls>
+<source src="https://www.dropbox.com/scl/fi/29ltf0wnewg00s76mt8ut/V-deo-greenwashing-4.mp4?rlkey=jknucxjq9ufkpe7f2r7nhp2qf&st=k2z8x128&raw=1">
+</video>
+<p class="data-source-note">
+📌 Based on real cases documented by Greenpeace and the report “The Greenwashing Files” (2021). This video explores misleading environmental marketing strategies used by global brands.    </p>
+    </div>
+<div class="portfolio__card">
+        <video width="640" height="360" controls>
+  <source src="assets/fake news.mp4" type="video/mp4">
+</video>
+<p class="data-source-note">
+📌 Content developed using studies from the Reuters Institute and Statista data on digital misinformation. The video examines how fake news spreads and its impact on younger audiences.    </p>
+    </div>
+
+</div>
+</section>
+<footer>
+<section class="section__container contact__container" id="contact">
+    <div class="logo">B</div>
+    <h2 id= "section-foot" class= "section__header">Let's Talk!</h2>
+    <p id= "foot-description" class="section__description">
+        An open invitation to connect and exploring collaborative opportunities.
+    </p>
+    <div class="contact__socials">
+        <a href="#" onclick="navigator.clipboard.writeText('brenda.ormachea@outlook.es'); alert('Email copiado');"><i class="ri-mail-line"></i></a>
+        <a href="https://www.linkedin.com/in/brenda-ormachea-306364161" target="_blank" title="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+        <a href="https://www.instagram.com/brendaormachea_/" target="_blank" title="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="https://github.com/brendaormachea" target="_blank" title="GitHub"><i class="ri-github-line"></i></a>
+    </div>
+</div>
+</footer>
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
