@@ -1,12 +1,12 @@
 {
-  "hero-title": "<br/>Data Analyst &<br/>Content Creator",
+  "hero-title": "<br/>Data Analyst &<br/>Visual Storyteller",
   "hero-button": "Available for Projects",
   "nav-home": "Home",
   "nav-about": "About Me",
   "nav-portfolio": "Portfolio",
   "nav-contact": "Contacto",
   "body-about": "About Me",
-  "body-description":"Multilingual Data Analyst and Content Creator fluent in Spanish, English, and Italian. With a background in Psychology and certifications in Big Data and Full Stack Development, I bring together analytical thinking and creativity to craft stories that connect. I’m passionate about transforming complex data into clear insights and turning ideas into content that inspires and engages.",
+  "body-description":"Multilingual Data Analyst and Visual Storyteller fluent in Spanish, English, and Italian. With a background in Psychology and certifications in Big Data and Full Stack Development, I bring together analytical thinking and creativity to craft stories that connect. I’m passionate about transforming complex data into clear insights and turning ideas into content that inspires and engages.",
   "about-button": "Download CV",
   "section-skills": "My Skills",
   "section-header": "My Portfolio",
@@ -15,4 +15,5 @@
   "foot-description": "An open invitation to connect and exploring collaborative opportunities.",
 
 "dashboardSourceNote": "📌 Data source: Migration Data Portal and Gender + Migration Hub."
+
 }
